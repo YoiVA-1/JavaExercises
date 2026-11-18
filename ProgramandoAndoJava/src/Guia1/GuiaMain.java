@@ -16,12 +16,19 @@ public class GuiaMain {
                JOptionPane.showInputDialog(null,
                      "1.ejercicio Estructuras Condicionales \n " +
                            "Lista de Ejercicios \n" +
-                           "1.Pida un numero entero al usuario e imprima si es Positivo, Negativo o Cero. Use if - else if - else.\n" +
+                           "1.Pida un numero entero al usuario e imprima si es Positivo, Negativo o Cero. Use if - else if - else.\n"
+                           +
                            "2.Solicite un numero entero y determine si es Par o Impar. Use el operador modulo (%).\n" +
-                           "3. Pida la edad del usuario. Si es >= 18 mostrar 'Puede ingresar', si es menor 'Acceso denegado', si es negativa 'Edad invalida'.\n" +
-                           "4. Solicite dos numeros y un operador (+, -, *, /). Realice la operacion con switch. Valide la division entre cero.\n" +
+                           "3. Pida la edad del usuario. Si es >= 18 mostrar 'Puede ingresar', si es menor 'Acceso denegado', si es negativa 'Edad invalida'.\n"
+                           +
+                           "4. Solicite dos numeros y un operador (+, -, *, /). Realice la operacion con switch. Valide la division entre cero.\n"
+                           +
                            "5.Pida un anio y determine si es bisiesto. Reglas: divisible entre 4, no entre 100, excepto si es divisible entre 400. \n" +
-                           "8.Solicite el valor de una compra y aplique descuento: >$500.000 = 20%, >$200.000 = 15%, >$100.000 = 10%. Mostrar valor original, descuento y total.\n" +
+                           "6.Pida una nota entre 0 y 100 y clasifiquela: 90-100 Excelente, 80-89 Bueno, 70-79 Aceptable, 60-69 Insuficiente, <60 Reprobado. Valide el rango.\n" +
+                           "7.Solicite tres numeros e imprima cual es el mayor. Extra: si hay empate entre dos o los tres, indicarlo.\n" +
+                           "8.Solicite el valor de una compra y aplique descuento: >$500.000 = 20%, >$200.000 = 15%, >$100.000 = 10%. Mostrar valor original, descuento y total.\n"
+                           +
+                           "9Simule un login: usuario correcto 'admin', contrasena '1234'. Si coinciden mostrar 'Bienvenido', si no 'Credenciales incorrectas'. Use equals().\n" +
                            "10.Solicite peso (kg) y altura (m). Calcule IMC = peso / (altura * altura). Clasifique: <18.5 Bajo peso, 18.5-24.9 Normal, 25-29.9 Sobrepeso, >=30 Obesidad.\n"
                            +
                            "Ingrese una opcion\n" +
@@ -49,8 +56,17 @@ public class GuiaMain {
          if (opcion == 5) {
             Ejercicio5();
          }
+         if (opcion == 6) {
+            Ejercicio6();
+         }
+         if (opcion == 7) {
+            Ejercicio7();
+         }
          if (opcion == 8) {
             Ejercicio8();
+         }
+         if (opcion == 9) {
+            Ejercicio9();
          }
          if (opcion == 10) {
             Ejercicio10();
@@ -63,6 +79,8 @@ public class GuiaMain {
          opcion = Integer.parseInt(
                JOptionPane.showInputDialog(null,
                      "2.Ejercicios practicos: ciclos for, while y arreglos. \n " +
+                           "11.Imprimir los numeros del 1 al 50 usando un ciclo for.\n" +
+                           "12.Mostrar los numeros del 50 al 1 usando un ciclo for.\n" +
                            "17.Mostrar la tabla de multiplicar del numero 7 usando un ciclo for.\n" +
                            "21.Calcular el factorial de un numero almacenado en una variable usando un ciclo for\n" +
                            "27.Imprimir un cuadrado de 6x6 asteriscos usando ciclos for anidados.\n" +
@@ -77,6 +95,14 @@ public class GuiaMain {
                            "\n")
 
          );
+
+         if (opcion == 11) {
+            Ejercicio11();
+         }
+
+         if (opcion == 12) {
+            Ejercicio12();
+         }
 
          if (opcion == 17) {
             JOptionPane.showConfirmDialog(null, "Ingreso al Ejercicio 17");
@@ -141,20 +167,44 @@ public class GuiaMain {
       Entero.CalcularEntero();
    }
 
-      public void Ejercicio2() {
+   public void Ejercicio2() {
       Ejercicio2 ParImpar = new Ejercicio2();
       ParImpar.CalcularParImpar();
    }
 
-      public void Ejercicio3() {
+   public void Ejercicio3() {
       Ejercicio3 Edad = new Ejercicio3();
       Edad.verificarEdad();
    }
 
-      public void Ejercicio4() {
+   public void Ejercicio4() {
       Ejercicio4 Operacion = new Ejercicio4();
       Operacion.Operaciones();
    }
 
+   public void Ejercicio11() {
+      Ejercicio11 Contador = new Ejercicio11();
+      Contador.MostrarNumeros();
+   }
+
+   public void Ejercicio12() {
+      Ejercicio12 ContadorReversa = new Ejercicio12();
+      ContadorReversa.MostrarNumerosReversa();
+   }
+
+   public void Ejercicio6() {
+      Ejercicio6 ClasificarNota = new Ejercicio6();
+      ClasificarNota.ClasificarNota();
+   }
+
+   public void Ejercicio7() {
+      Ejercicio7 NumeroMayor = new Ejercicio7();
+      NumeroMayor.NumeroMayor();
+   }
+
+   public void Ejercicio9(){
+      Ejercicio9 Login = new Ejercicio9();
+      Login.Login();
+   }
 
 }
