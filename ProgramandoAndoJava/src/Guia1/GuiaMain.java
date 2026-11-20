@@ -81,6 +81,7 @@ public class GuiaMain {
                      "2.Ejercicios practicos: ciclos for, while y arreglos. \n " +
                            "11.Imprimir los numeros del 1 al 50 usando un ciclo for.\n" +
                            "12.Mostrar los numeros del 50 al 1 usando un ciclo for.\n" +
+                           "13.Imprimir todos los numeros pares del 1 al 100 usando un ciclo for.\n" +
                            "17.Mostrar la tabla de multiplicar del numero 7 usando un ciclo for.\n" +
                            "21.Calcular el factorial de un numero almacenado en una variable usando un ciclo for\n" +
                            "27.Imprimir un cuadrado de 6x6 asteriscos usando ciclos for anidados.\n" +
@@ -103,6 +104,15 @@ public class GuiaMain {
          if (opcion == 12) {
             Ejercicio12();
          }
+
+         if (opcion == 13) {
+            Ejercicio13();
+         }
+
+         if (opcion == 14) {
+            Ejercicio14();
+         }
+
 
          if (opcion == 17) {
             JOptionPane.showConfirmDialog(null, "Ingreso al Ejercicio 17");
@@ -190,6 +200,16 @@ public class GuiaMain {
    public void Ejercicio12() {
       Ejercicio12 ContadorReversa = new Ejercicio12();
       ContadorReversa.MostrarNumerosReversa();
+   }
+
+   public void Ejercicio13() {
+      Ejercicio13 ContadorNumerosPar = new Ejercicio13();
+      ContadorNumerosPar.NumerosParesContador();
+   }
+
+   public void Ejercicio14() {
+      Ejercicio14 ContadorNumerosImpar = new Ejercicio14();
+      ContadorNumerosImpar.NumerosImparesContador();
    }
 
    public void Ejercicio6() {
